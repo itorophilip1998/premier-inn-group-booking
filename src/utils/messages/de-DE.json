@@ -1,0 +1,67 @@
+{
+  "form": {
+    "title": "Gruppenbuchungsanfrage",
+    "subtitle": "Füllen Sie das Formular unten aus und wir melden uns innerhalb von 24 Stunden bei Ihnen",
+    "fields": {
+      "firstName": {
+        "label": "Vorname",
+        "placeholder": "Geben Sie Ihren Vornamen ein",
+        "error": "Bitte geben Sie Ihren Vornamen ein"
+      },
+      "lastName": {
+        "label": "Nachname",
+        "placeholder": "Geben Sie Ihren Nachnamen ein",
+        "error": "Bitte geben Sie Ihren Nachnamen ein"
+      },
+      "email": {
+        "label": "E-Mail-Adresse",
+        "placeholder": "Geben Sie Ihre E-Mail-Adresse ein",
+        "error": "Bitte geben Sie eine gültige E-Mail-Adresse ein"
+      },
+      "phone": {
+        "label": "Telefonnummer",
+        "placeholder": "Geben Sie Ihre Telefonnummer ein",
+        "error": "Bitte geben Sie eine gültige Telefonnummer ein"
+      },
+      "company": {
+        "label": "Firmenname",
+        "placeholder": "Geben Sie Ihren Firmennamen ein",
+        "error": "Bitte geben Sie Ihren Firmennamen ein"
+      },
+      "groupSize": {
+        "label": "Gruppengröße",
+        "placeholder": "Gruppengröße auswählen",
+        "error": "Bitte wählen Sie eine Gruppengröße aus"
+      },
+      "arrivalDate": {
+        "label": "Anreisedatum",
+        "placeholder": "Anreisedatum auswählen",
+        "error": "Bitte wählen Sie ein Anreisedatum aus"
+      },
+      "departureDate": {
+        "label": "Abreisedatum",
+        "placeholder": "Abreisedatum auswählen",
+        "error": "Bitte wählen Sie ein Abreisedatum aus"
+      },
+      "location": {
+        "label": "Bevorzugter Standort",
+        "placeholder": "Bevorzugten Standort eingeben",
+        "error": "Bitte geben Sie einen bevorzugten Standort ein"
+      },
+      "requirements": {
+        "label": "Besondere Anforderungen",
+        "placeholder": "Geben Sie besondere Anforderungen ein",
+        "error": "Bitte geben Sie besondere Anforderungen ein"
+      },
+      "Submit": "Anfrage absenden"
+    },
+    "submit": "Anfrage absenden",
+    "success": "Vielen Dank für Ihre Anfrage. Wir melden uns innerhalb von 24 Stunden bei Ihnen.",
+    "error": "Bei der Übermittlung Ihrer Anfrage ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut."
+  },
+  "navigation": {
+    "language": "Sprache",
+    "switchToGerman": "Zu Deutsch wechseln",
+    "switchToEnglish": "Zu Englisch wechseln"
+  }
+}

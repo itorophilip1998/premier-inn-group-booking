@@ -1,0 +1,54 @@
+{
+  "form": {
+    "title": "Gruppenbuchungsanfrage",
+    "subtitle": "Füllen Sie das Formular unten aus, um eine Gruppenbuchungsanfrage zu stellen. Unser Team wird sich in Kürze bei Ihnen melden.",
+    "success": {
+      "title": "Buchung bestätigt!",
+      "subtitle": "Vielen Dank für Ihre Buchungsanfrage. Wir werden uns innerhalb von 24 Stunden bei Ihnen melden.",
+      "done": "Fertig"
+    },
+    "fields": {
+      "firstName": {
+        "label": "Vorname",
+        "placeholder": "Geben Sie Ihren Vornamen ein"
+      },
+      "lastName": {
+        "label": "Nachname",
+        "placeholder": "Geben Sie Ihren Nachnamen ein"
+      },
+      "email": {
+        "label": "E-Mail-Adresse",
+        "placeholder": "Geben Sie Ihre E-Mail-Adresse ein"
+      },
+      "phone": {
+        "label": "Telefonnummer",
+        "placeholder": "Geben Sie Ihre Telefonnummer ein"
+      },
+      "company": {
+        "label": "Firmenname",
+        "placeholder": "Geben Sie Ihren Firmennamen ein"
+      },
+      "groupSize": {
+        "label": "Gruppengröße",
+        "placeholder": "Gruppengröße auswählen"
+      },
+      "arrivalDate": {
+        "label": "Anreisedatum",
+        "placeholder": "Anreisedatum auswählen"
+      },
+      "departureDate": {
+        "label": "Abreisedatum",
+        "placeholder": "Abreisedatum auswählen"
+      },
+      "location": {
+        "label": "Bevorzugter Standort",
+        "placeholder": "Geben Sie den bevorzugten Standort ein"
+      },
+      "requirements": {
+        "label": "Besondere Anforderungen",
+        "placeholder": "Geben Sie besondere Anforderungen ein"
+      },
+      "Submit": "Buchung absenden"
+    }
+  }
+}

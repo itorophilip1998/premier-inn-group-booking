@@ -1,0 +1,54 @@
+{
+  "form": {
+    "title": "Group Booking Enquiry",
+    "subtitle": "Fill out the form below to make a group booking enquiry. Our team will get back to you shortly.",
+    "success": {
+      "title": "Booking Confirmed!",
+      "subtitle": "Thank you for your booking enquiry. We'll be in touch within 24 hours.",
+      "done": "Done"
+    },
+    "fields": {
+      "firstName": {
+        "label": "First Name",
+        "placeholder": "Enter your first name"
+      },
+      "lastName": {
+        "label": "Last Name",
+        "placeholder": "Enter your last name"
+      },
+      "email": {
+        "label": "Email Address",
+        "placeholder": "Enter your email address"
+      },
+      "phone": {
+        "label": "Phone Number",
+        "placeholder": "Enter your phone number"
+      },
+      "company": {
+        "label": "Company Name",
+        "placeholder": "Enter your company name"
+      },
+      "groupSize": {
+        "label": "Group Size",
+        "placeholder": "Select group size"
+      },
+      "arrivalDate": {
+        "label": "Arrival Date",
+        "placeholder": "Select arrival date"
+      },
+      "departureDate": {
+        "label": "Departure Date",
+        "placeholder": "Select departure date"
+      },
+      "location": {
+        "label": "Preferred Location",
+        "placeholder": "Enter preferred location"
+      },
+      "requirements": {
+        "label": "Special Requirements",
+        "placeholder": "Enter any special requirements"
+      },
+      "Submit": "Submit Booking"
+    }
+  }
+}

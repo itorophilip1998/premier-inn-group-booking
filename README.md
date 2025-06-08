@@ -1,36 +1,137 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Premier Inn Group Booking System
 
-## Getting Started
+A modern, responsive web application for managing group bookings at Premier Inn hotels. Built with Next.js, React, and TypeScript.
 
-First, run the development server:
+## 🚀 Features
+
+- 🌐 Internationalization support (English and German)
+- 🌓 Dark/Light theme support
+- 📱 Responsive design
+- ✨ Modern animations with Framer Motion
+- 📝 Form validation with Zod
+- 🎨 Styled with Tailwind CSS
+- 🧪 Comprehensive test coverage
+- 🔍 Accessibility features
+
+## 📋 Prerequisites
+
+- Node.js 18.x or later
+- npm 9.x or later
+- Git
+
+## 🛠️ Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/your-username/premier-inn-group-booking.git
+cd premier-inn-group-booking
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+3. Set up environment variables:
+   Create a `.env.local` file in the root directory with the following variables:
+
+```env
+NEXT_PUBLIC_API_URL=your_api_url
+```
+
+## 🏃‍♂️ Development
+
+Start the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The application will be available at `http://localhost:3000`
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🧪 Testing
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Run the test suite:
 
-## Learn More
+```bash
+# Run all tests
+npm test
 
-To learn more about Next.js, take a look at the following resources:
+# Run tests in watch mode
+npm run test:watch
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Generate test coverage report
+npm run test:coverage
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🏗️ Building for Production
 
-## Deploy on Vercel
+1. Build the application:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+npm run build
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+2. Start the production server:
+
+```bash
+npm start
+```
+
+## 📁 Project Structure
+
+```
+premier-inn-group-booking/
+├── src/
+│   ├── app/                 # Next.js app directory
+│   │   ├── [locale]/       # Internationalized routes
+│   │   └── api/            # API routes
+│   ├── components/         # React components
+│   ├── context/           # React context providers
+│   ├── lib/               # Utility functions
+│   ├── messages/          # Translation files
+│   └── styles/            # Global styles
+├── public/                # Static assets
+├── tests/                 # Test files
+└── types/                 # TypeScript type definitions
+```
+
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 15.3.3
+- **Language**: TypeScript
+- **UI Library**: React 19
+- **Styling**: Tailwind CSS
+- **Form Handling**: React Hook Form + Zod
+- **Testing**: Jest + React Testing Library
+- **Animation**: Framer Motion
+- **Internationalization**: next-intl
+- **Theme**: next-themes
+
+## 📚 Documentation
+
+For detailed documentation about the system architecture, components, and APIs, please refer to the [System Documentation](./SYSTEM_DOCUMENTATION.md).
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 👥 Authors
+
+- Your Name - Initial work
+
+## 🙏 Acknowledgments
+
+- Premier Inn for the inspiration
+- Next.js team for the amazing framework
+- All contributors who have helped shape this project

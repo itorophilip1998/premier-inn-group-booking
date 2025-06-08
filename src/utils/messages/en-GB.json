@@ -1,0 +1,67 @@
+{
+  "form": {
+    "title": "Group Booking Enquiry",
+    "subtitle": "Fill in the form below and we'll get back to you within 24 hours",
+    "fields": {
+      "firstName": {
+        "label": "First Name",
+        "placeholder": "Enter your first name",
+        "error": "Please enter your first name"
+      },
+      "lastName": {
+        "label": "Last Name",
+        "placeholder": "Enter your last name",
+        "error": "Please enter your last name"
+      },
+      "email": {
+        "label": "Email Address",
+        "placeholder": "Enter your email address",
+        "error": "Please enter a valid email address"
+      },
+      "phone": {
+        "label": "Phone Number",
+        "placeholder": "Enter your phone number",
+        "error": "Please enter a valid phone number"
+      },
+      "company": {
+        "label": "Company Name",
+        "placeholder": "Enter your company name",
+        "error": "Please enter your company name"
+      },
+      "groupSize": {
+        "label": "Group Size",
+        "placeholder": "Select group size",
+        "error": "Please select a group size"
+      },
+      "arrivalDate": {
+        "label": "Arrival Date",
+        "placeholder": "Select arrival date",
+        "error": "Please select an arrival date"
+      },
+      "departureDate": {
+        "label": "Departure Date",
+        "placeholder": "Select departure date",
+        "error": "Please select a departure date"
+      },
+      "location": {
+        "label": "Preferred Location",
+        "placeholder": "Enter preferred location",
+        "error": "Please enter a preferred location"
+      },
+      "requirements": {
+        "label": "Special Requirements",
+        "placeholder": "Enter any special requirements",
+        "error": "Please enter any special requirements"
+      },
+      "Submit": "Submit Enquiry"
+    },
+    "submit": "Submit Enquiry",
+    "success": "Thank you for your enquiry. We'll be in touch within 24 hours.",
+    "error": "There was an error submitting your enquiry. Please try again."
+  },
+  "navigation": {
+    "language": "Language",
+    "switchToGerman": "Switch to German",
+    "switchToEnglish": "Switch to English"
+  }
+}
