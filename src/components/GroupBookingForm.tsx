@@ -5,7 +5,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useTranslations, useLocale } from "next-intl";
 import { useRouter } from "next/navigation";
 import {
-  groupBookingSchema,
+  createGroupBookingSchema,
   type GroupBookingFormData,
 } from "@/lib/validations";
 import { useBooking } from "@/context/BookingContext";
@@ -22,7 +22,7 @@ export function GroupBookingForm() {
     handleSubmit,
     formState: { errors, isSubmitting },
   } = useForm<GroupBookingFormData>({
-    resolver: zodResolver(groupBookingSchema),
+    resolver: zodResolver(createGroupBookingSchema(t)),
   });
 
   const onSubmit = async (data: GroupBookingFormData) => {
@@ -233,7 +233,7 @@ export function GroupBookingForm() {
           )}
         </div>
 
-        <div className="relative sm:col-span-2">
+        <div className="relative">
           <input
             type="text"
             id="location"
@@ -255,13 +255,13 @@ export function GroupBookingForm() {
           )}
         </div>
 
-        <div className="relative sm:col-span-2">
+        <div className="relative col-span-2">
           <textarea
             id="requirements"
             {...register("requirements")}
-            rows={8}
             className="peer mt-1 block w-full rounded-md border border-gray-300 p-4 text-gray-900 placeholder:text-transparent focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
             placeholder={t("requirements.placeholder")}
+            rows={4}
           />
           <label
             htmlFor="requirements"
@@ -272,13 +272,13 @@ export function GroupBookingForm() {
         </div>
       </div>
 
-      <div className="flex justify-end">
+      <div className="flex justify-center">
         <button
           type="submit"
           disabled={isSubmitting}
-          className="inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 disabled:opacity-50"
+          className="inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
         >
-          {isSubmitting ? "Submitting..." : t("Submit")}
+          {t("Submit")}
         </button>
       </div>
     </form>

@@ -10,6 +10,9 @@ const customJestConfig = {
     transformIgnorePatterns: [
         '/node_modules/(?!(next-intl|@formatjs)/)',
     ],
+    moduleNameMapper: {
+        '^@/(.*)$': '<rootDir>/src/$1',
+    },
 };
 
 module.exports = createJestConfig(customJestConfig); 
