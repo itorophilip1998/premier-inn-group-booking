@@ -10,48 +10,39 @@
     "fields": {
       "firstName": {
         "label": "First Name",
-        "placeholder": "Enter your first name",
-        "error": "First name is required"
+        "placeholder": "Enter your first name"
       },
       "lastName": {
         "label": "Last Name",
-        "placeholder": "Enter your last name",
-        "error": "Last name is required"
+        "placeholder": "Enter your last name"
       },
       "email": {
         "label": "Email Address",
-        "placeholder": "Enter your email address",
-        "error": "Invalid email address"
+        "placeholder": "Enter your email address"
       },
       "phone": {
         "label": "Phone Number",
-        "placeholder": "Enter your phone number",
-        "error": "Phone number must be at least 10 digits"
+        "placeholder": "Enter your phone number"
       },
       "company": {
         "label": "Company Name",
-        "placeholder": "Enter your company name",
-        "error": "Company name is required"
+        "placeholder": "Enter your company name"
       },
       "groupSize": {
         "label": "Group Size",
-        "placeholder": "Select group size",
-        "error": "Group size is required"
+        "placeholder": "Select group size"
       },
       "arrivalDate": {
         "label": "Arrival Date",
-        "placeholder": "Select arrival date",
-        "error": "Arrival date is required"
+        "placeholder": "Select arrival date"
       },
       "departureDate": {
         "label": "Departure Date",
-        "placeholder": "Select departure date",
-        "error": "Departure date is required"
+        "placeholder": "Select departure date"
       },
       "location": {
         "label": "Preferred Location",
-        "placeholder": "Enter preferred location",
-        "error": "Location is required"
+        "placeholder": "Enter preferred location"
       },
       "requirements": {
         "label": "Special Requirements",
