@@ -14,13 +14,13 @@ jest.mock("next/navigation", () => ({
   }),
 }));
 
-// const renderLanguageSwitcher = () => {
-//   return render(
-//     <NextIntlClientProvider locale="en-GB" messages={messages}>
-//       <LanguageSwitcher />
-//     </NextIntlClientProvider>
-//   );
-// };
+const renderLanguageSwitcher = () => {
+  return render(
+    <NextIntlClientProvider locale="en-GB" messages={messages}>
+      <LanguageSwitcher />
+    </NextIntlClientProvider>
+  );
+};
 
 describe("LanguageSwitcher", () => {
   beforeEach(() => {
@@ -40,5 +40,28 @@ describe("LanguageSwitcher", () => {
       };
       return (key: string) => translations[key] || key;
     });
+  });
+
+  it("renders language options", () => {
+    renderLanguageSwitcher();
+    const select = screen.getByRole("combobox");
+    expect(select).toBeInTheDocument();
+    expect(select).toHaveValue("en-GB");
+  });
+
+  it("changes language when selecting a different option", () => {
+    renderLanguageSwitcher();
+    const select = screen.getByRole("combobox");
+
+    fireEvent.change(select, { target: { value: "de-DE" } });
+
+    // Verify the router.push was called with the correct path
+    expect(mockPush).toHaveBeenCalledWith("/de-DE");
+  });
+
+  it("displays error messages", () => {
+    renderLanguageSwitcher();
+    const alerts = screen.queryAllByRole("alert");
+    alerts.forEach((alert) => console.log(alert.textContent));
   });
 });
