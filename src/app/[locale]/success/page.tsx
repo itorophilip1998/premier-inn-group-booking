@@ -12,6 +12,7 @@ const ReactConfetti = dynamic(() => import("react-confetti"), { ssr: false });
 
 export default function SuccessPage() {
   const t = useTranslations("form");
+  const t2 = useTranslations("form.success");
   const locale = useLocale();
   const router = useRouter();
   const { bookingData } = useBooking();

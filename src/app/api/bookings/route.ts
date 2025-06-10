@@ -1,27 +1,18 @@
 import { NextResponse } from "next/server";
-import { groupBookingSchema } from "@/utils/validation/validations";
+import { groupBookingSchema } from "@/lib/validations";
 
 export async function POST(request: Request) {
   try {
     const body = await request.json();
     const validatedData = groupBookingSchema.parse(body);
 
-    // Here you would typically save the data to your database
-    // For now, we'll just return a success response
-    return NextResponse.json({
-      success: true,
-      message: "Booking request received successfully",
-      data: validatedData,
-    });
+    // TODO: Implement actual data storage
+    // For now, just log the data
+    console.log("Received booking:", validatedData);
+
+    return NextResponse.json({ success: true });
   } catch (error) {
-    console.error("Error processing booking:", error);
-    return NextResponse.json(
-      {
-        success: false,
-        message: "Failed to process booking request",
-        error: error instanceof Error ? error.message : "Unknown error",
-      },
-      { status: 400 }
-    );
+    console.error("Validation error:", error);
+    return NextResponse.json({ error: "Invalid form data" }, { status: 400 });
   }
 }
