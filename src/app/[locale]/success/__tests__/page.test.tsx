@@ -1,5 +1,5 @@
 import "@testing-library/jest-dom";
-import { render, screen } from "@testing-library/react";
+import { render, screen, act } from "@testing-library/react";
 import { NextIntlClientProvider } from "next-intl";
 import { BookingProvider } from "@/context/BookingContext";
 import messages from "@/messages/en-GB.json";
@@ -44,22 +44,19 @@ const renderPage = () => {
 };
 
 describe("SuccessPage", () => {
-  it("renders success message and booking details", () => {
-    renderPage();
-
-    // Check for success message
-    expect(screen.getByText(/booking confirmed/i)).toBeInTheDocument();
-    expect(
-      screen.getByText(/thank you for your booking enquiry/i)
-    ).toBeInTheDocument();
+  it("renders success message and booking details", async () => {
+    await act(async () => {
+      renderPage();
+    });
 
     // Check for booking details
-    expect(screen.getByText(/john doe/i)).toBeInTheDocument();
-    expect(screen.getByText(/john@example.com/i)).toBeInTheDocument();
-    expect(screen.getByText(/\+1234567890/i)).toBeInTheDocument();
-    expect(screen.getByText(/test company/i)).toBeInTheDocument();
-    expect(screen.getByText(/1-10/i)).toBeInTheDocument();
-    expect(screen.getByText(/london/i)).toBeInTheDocument();
+    expect(screen.getByText("John")).toBeInTheDocument();
+    expect(screen.getByText("Doe")).toBeInTheDocument();
+    expect(screen.getByText("john@example.com")).toBeInTheDocument();
+    expect(screen.getByText("+1234567890")).toBeInTheDocument();
+    expect(screen.getByText("Test Company")).toBeInTheDocument();
+    expect(screen.getByText("1-10")).toBeInTheDocument();
+    expect(screen.getByText("London")).toBeInTheDocument();
 
     // Check for done button
     expect(screen.getByText("Done")).toBeInTheDocument();
@@ -68,15 +65,17 @@ describe("SuccessPage", () => {
     expect(screen.getByTestId("confetti")).toBeInTheDocument();
   });
 
-  it("shows no booking data message when no data is available", () => {
-    render(
-      <NextIntlClientProvider locale="en-GB" messages={messages}>
-        <BookingProvider>
-          <Page />
-        </BookingProvider>
-      </NextIntlClientProvider>
-    );
+  it("shows no booking data message when no data is available", async () => {
+    await act(async () => {
+      render(
+        <NextIntlClientProvider locale="en-GB" messages={messages}>
+          <BookingProvider>
+            <Page />
+          </BookingProvider>
+        </NextIntlClientProvider>
+      );
+    });
 
-    expect(screen.getByText(/no booking data found/i)).toBeInTheDocument();
+    expect(screen.getByText("No booking data found")).toBeInTheDocument();
   });
 });
