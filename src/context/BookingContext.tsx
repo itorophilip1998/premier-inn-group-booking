@@ -1,7 +1,7 @@
 "use client";
 
 import { createContext, useContext, useState, ReactNode } from "react";
-import { GroupBookingFormData } from "@/lib/validations";
+import { GroupBookingFormData } from "@/utils/validation/validations";
 
 interface BookingContextType {
   bookingData: GroupBookingFormData | null;
