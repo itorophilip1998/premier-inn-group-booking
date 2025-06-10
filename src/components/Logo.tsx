@@ -14,6 +14,16 @@ export const Logo = () => {
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         className="relative"
+        animate={{
+          y: [0, -10, 0],
+          scale: [1, 1.05, 1],
+        }}
+        transition={{
+          duration: 4,
+          ease: "easeInOut",
+          repeat: Infinity,
+          repeatType: "reverse",
+        }}
       >
         <motion.div
           className="absolute -top-2 left-0 w-full h-1 bg-blue-600"
