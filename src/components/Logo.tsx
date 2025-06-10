@@ -1,8 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useRouter } from "next/navigation";
 
 export const Logo = () => {
+  const router = useRouter();
+
   return (
     <motion.div
       initial={{ opacity: 0, y: -20 }}
@@ -13,7 +16,7 @@ export const Logo = () => {
       <motion.div
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
-        className="relative"
+        className="relative cursor-pointer"
         animate={{
           y: [0, -10, 0],
           scale: [1, 1.05, 1],
@@ -24,6 +27,7 @@ export const Logo = () => {
           repeat: Infinity,
           repeatType: "reverse",
         }}
+        onClick={() => router.push("/")}
       >
         <motion.div
           className="absolute -top-2 left-0 w-full h-1 bg-blue-600"

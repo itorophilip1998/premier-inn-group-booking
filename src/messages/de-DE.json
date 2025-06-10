@@ -1,4 +1,10 @@
 {
+  "navigation": {
+    "language": "Sprache",
+    "switchLanguage": "Sprache wechseln",
+    "switchToEnglish": "Englisch",
+    "switchToGerman": "Deutsch"
+  },
   "form": {
     "title": "Gruppenbuchungsanfrage",
     "subtitle": "Füllen Sie das Formular unten aus, um eine Gruppenbuchungsanfrage zu stellen. Unser Team wird sich in Kürze bei Ihnen melden.",

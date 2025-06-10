@@ -1,4 +1,10 @@
 {
+  "navigation": {
+    "language": "Language",
+    "switchLanguage": "Switch language",
+    "switchToEnglish": "English",
+    "switchToGerman": "German"
+  },
   "form": {
     "title": "Group Booking Enquiry",
     "subtitle": "Fill out the form below to make a group booking enquiry. Our team will get back to you shortly.",

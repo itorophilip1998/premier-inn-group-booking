@@ -38,16 +38,16 @@ describe("GroupBookingForm", () => {
   it("renders all form fields", () => {
     renderForm();
 
-    expect(screen.getByLabelText(/first name/i)).toBeInTheDocument();
-    expect(screen.getByLabelText(/last name/i)).toBeInTheDocument();
-    expect(screen.getByLabelText(/email/i)).toBeInTheDocument();
-    expect(screen.getByLabelText(/phone/i)).toBeInTheDocument();
-    expect(screen.getByLabelText(/company/i)).toBeInTheDocument();
-    expect(screen.getByLabelText(/group size/i)).toBeInTheDocument();
-    expect(screen.getByLabelText(/arrival date/i)).toBeInTheDocument();
-    expect(screen.getByLabelText(/departure date/i)).toBeInTheDocument();
-    expect(screen.getByLabelText(/location/i)).toBeInTheDocument();
-    expect(screen.getByLabelText(/requirements/i)).toBeInTheDocument();
+    expect(screen.getByLabelText("firstName.label")).toBeInTheDocument();
+    expect(screen.getByLabelText("lastName.label")).toBeInTheDocument();
+    expect(screen.getByLabelText("email.label")).toBeInTheDocument();
+    expect(screen.getByLabelText("phone.label")).toBeInTheDocument();
+    expect(screen.getByLabelText("company.label")).toBeInTheDocument();
+    expect(screen.getByLabelText("groupSize.label")).toBeInTheDocument();
+    expect(screen.getByLabelText("arrivalDate.label")).toBeInTheDocument();
+    expect(screen.getByLabelText("departureDate.label")).toBeInTheDocument();
+    expect(screen.getByLabelText("location.label")).toBeInTheDocument();
+    expect(screen.getByLabelText("requirements.label")).toBeInTheDocument();
   });
 
   it("shows validation errors for required fields", async () => {
@@ -56,20 +56,20 @@ describe("GroupBookingForm", () => {
     fireEvent.click(submitButton);
 
     await waitFor(() => {
-      expect(screen.getByText(/first name is required/i)).toBeInTheDocument();
-      expect(screen.getByText(/last name is required/i)).toBeInTheDocument();
-      expect(screen.getByText(/email is required/i)).toBeInTheDocument();
+      expect(screen.getByText("First name is required")).toBeInTheDocument();
+      expect(screen.getByText("Last name is required")).toBeInTheDocument();
+      expect(screen.getByText("Email is required")).toBeInTheDocument();
     });
   });
 
   it("validates email format", async () => {
     renderForm();
-    const emailInput = screen.getByLabelText(/email/i);
+    const emailInput = screen.getByLabelText("email.label");
     fireEvent.change(emailInput, { target: { value: "invalid-email" } });
     fireEvent.blur(emailInput);
 
     await waitFor(() => {
-      expect(screen.getByText(/invalid email format/i)).toBeInTheDocument();
+      expect(screen.getByText("Invalid email format")).toBeInTheDocument();
     });
   });
 
@@ -77,31 +77,31 @@ describe("GroupBookingForm", () => {
     renderForm();
 
     // Fill in the form
-    fireEvent.change(screen.getByLabelText(/first name/i), {
+    fireEvent.change(screen.getByLabelText("firstName.label"), {
       target: { value: "John" },
     });
-    fireEvent.change(screen.getByLabelText(/last name/i), {
+    fireEvent.change(screen.getByLabelText("lastName.label"), {
       target: { value: "Doe" },
     });
-    fireEvent.change(screen.getByLabelText(/email/i), {
+    fireEvent.change(screen.getByLabelText("email.label"), {
       target: { value: "john@example.com" },
     });
-    fireEvent.change(screen.getByLabelText(/phone/i), {
+    fireEvent.change(screen.getByLabelText("phone.label"), {
       target: { value: "+1234567890" },
     });
-    fireEvent.change(screen.getByLabelText(/company/i), {
+    fireEvent.change(screen.getByLabelText("company.label"), {
       target: { value: "Test Company" },
     });
-    fireEvent.change(screen.getByLabelText(/group size/i), {
+    fireEvent.change(screen.getByLabelText("groupSize.label"), {
       target: { value: "1-10" },
     });
-    fireEvent.change(screen.getByLabelText(/arrival date/i), {
+    fireEvent.change(screen.getByLabelText("arrivalDate.label"), {
       target: { value: "2024-12-01" },
     });
-    fireEvent.change(screen.getByLabelText(/departure date/i), {
+    fireEvent.change(screen.getByLabelText("departureDate.label"), {
       target: { value: "2024-12-05" },
     });
-    fireEvent.change(screen.getByLabelText(/location/i), {
+    fireEvent.change(screen.getByLabelText("location.label"), {
       target: { value: "London" },
     });
 
